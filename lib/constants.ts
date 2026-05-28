@@ -1,3 +1,11 @@
+const formatIndianSymbol = (symbol: string) => {
+    if (symbol.endsWith(".NS")) {
+        return `NSE:${symbol.replace(".NS", "").toUpperCase()}`;
+    }
+
+    return symbol.toUpperCase();
+};
+
 export const NAV_ITEMS = [
     { href: '/', label: 'Dashboard' },
     { href: '/search', label: 'Search' },
